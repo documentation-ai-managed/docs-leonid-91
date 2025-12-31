@@ -1,0 +1,126 @@
+---
+title: Changelog
+description: Review the version history of Leonid 91, including recent updates, new features, and fixes.
+---
+
+## Recent Updates
+
+Stay current with Leonid 91 releases from Agenc.io. You receive automatic updates when deploying sites, but check this changelog for details on new SEO tools, performance boosts, and fixes that enhance your websites' speed and search rankings.
+
+<Callout kind="info">
+  Upgrade to the latest version via your dashboard at https://dashboard.example.com. Review migration notes in each release below.
+</Callout>
+
+<Update label="2024-10-15" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added automatic SEO meta tag generator for pages, optimizing titles and descriptions based on your content.
+- Introduced sitemap.xml auto-generation with dynamic URL crawling for better search engine indexing.
+
+## Improvements
+
+- Enhanced Core Web Vitals scores by optimizing image lazy-loading and font preloading.
+- Reduced initial page load time by `>20%` through improved CSS critical path rendering.
+
+## Bug Fixes
+
+- Fixed intermittent 404 errors on dynamic routes during high-traffic deploys.
+- Resolved mobile viewport scaling issues on iOS Safari.
+
+</Update>
+
+<Update label="2024-09-10" description="v1.0.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Launched preview mode for real-time site editing without publishing.
+- Integrated Google Analytics 4 tracking with one-click setup.
+
+## Improvements
+
+- Streamlined deployment workflow, cutting average build time to under 30 seconds.
+
+## Bug Fixes
+
+- Corrected JavaScript bundle minification errors causing blank pages.
+- Patched security vulnerability in user-uploaded assets (CVE-2024-0910).
+
+</Update>
+
+<Update label="2024-08-05" description="v0.9.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Removed legacy Twig templating; migrate to modern Handlebars syntax.
+
+## New Features
+
+- Core site builder with drag-and-drop blocks for headers, footers, and content sections.
+
+## Bug Fixes
+
+- Fixed cross-browser compatibility for flexbox layouts.
+
+</Update>
+
+## Upgrade Process
+
+Follow these steps to update your Leonid 91 sites safely.
+
+<Steps>
+  <Step title="Backup Site" icon="database">
+    Export your current configuration:
+
+````yaml
+# config.yaml
+site:
+  name: "Your Business Site"
+  domain: "example.com"
+  seo:
+    title: "Your Business"
+````
+
+  </Step>
+  <Step title="Update CLI" icon="download">
+    <CodeGroup tabs="npm,yarn">
+````bash
+npm install -g @agenc.io/leonid-cli@latest
+````
+````bash
+yarn global add @agenc.io/leonid-cli@latest
+````
+    </CodeGroup>
+  </Step>
+  <Step title="Deploy" icon="rocket">
+    Run `leonid deploy` in your project root.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Test updates on a staging site first at https://staging.example.com.
+</Callout>
+
+## Upcoming Roadmap
+
+<Columns cols={3}>
+  <Card title="v1.2.0" icon="zap" href="#">
+    AI-powered content optimization and A/B testing tools.
+  </Card>
+  <Card title="v1.3.0" icon="shield" href="#">
+    Enhanced security with automatic HTTPS enforcement and WAF integration.
+  </Card>
+  <Card title="v2.0.0" icon="trending-up" href="#">
+    E-commerce modules and headless CMS support.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed Roadmap" default-open="false">
+
+| Milestone | Features | Timeline |
+|-----------|----------|----------|
+| Q4 2024 | SEO audits, performance dashboards | December |
+| Q1 2025 | Multi-language support | February |
+| Q2 2025 | API-first architecture | May |
+
+</Expandable>
